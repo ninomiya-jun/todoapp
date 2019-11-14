@@ -9,8 +9,11 @@ class TasksController < ApplicationController
 
   def confirm
     @task = Task.new(task_params) 
-    render :new if @task.invalid? 
-
+    if @task.invalid? 
+      render :action => 'confirm'
+    else
+      render :action => 'index'
+    end
   end
 
   def cast_to_bool(value)
