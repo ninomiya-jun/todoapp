@@ -1,0 +1,22 @@
+<h1>新規タスク</h1>
+
+ <%= form_for @task, url: {controller: 'tasks', action: 'confirm'} do |t| %>
+
+<div>
+  <%= t.label :content %><br>
+  <%= t.text_field :content %>
+</div>
+<div>
+  <%= t.label :description %><br>
+  <%= t.text_field :description %>
+</div>
+<div>
+ <%= t.label :completed %><br>
+ <%= t.check_box :completed %>
+</div>
+ <div>
+  <%= t.submit :確認画面へ %>
+</div>
+<% end %>
+
+<%= link_to '戻る', tasks_path %>

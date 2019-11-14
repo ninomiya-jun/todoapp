@@ -1,0 +1,11 @@
+<h1>タスク編集</h1>
+<%= form_for(@task) do |t| %>
+  <div><%= t.label :content %></div>
+  <div><%= t.text_field :content %></div>
+  <div><%= t.label :description %></div>
+  <div><%= t.text_field :description %></div>
+  <div><%= t.label :completed %></div>
+  <div><%= t.check_box :completed %></div>
+  <div><%= t.submit %></div>
+<% end %>
+<%= link_to '戻る', "/tasks" %>

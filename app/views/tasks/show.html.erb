@@ -1,0 +1,8 @@
+<h1>タスク詳細</h1>
+
+<p>Title: <%= @task.content %></p>
+<p>Description: <%= @task.description %></p>
+
+<%= link_to "一覧へ戻る", "/tasks" %>
+
+<%= link_to '編集ページへ', edit_task_path(@task) %>

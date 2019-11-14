@@ -1,0 +1,22 @@
+<h1>新規タスク 確認</h1>
+
+<%= form_for(@task) do |t| %>
+<div>
+  <%= t.label :content %><br>
+  <%= @task.content =%>
+  
+</div>
+<div>
+  <%= t.label :description %><br>
+  <%= @task.description =%>
+</div>
+<div>
+ <%= t.label :completed %><br>
+ <%= @task.completed =%>
+</div>
+<div>
+  <%= t.submit '新規登録' ,name: 'send'%>
+</div>
+<% end %>
+
+<%= link_to '戻る', tasks_path %>
